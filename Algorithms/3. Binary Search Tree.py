@@ -37,6 +37,20 @@ class Tree:
             self.right.preorder_traversal()
         print(self.value)
 
+def level(root, value, lev= 0):
+    if not root:
+        return 0
+    
+    if root.value == value:
+        return lev
+    
+    if root.value > value:
+        return level(root.left, value, lev + 1)
+    if root.value < value:
+        return level(root.right, value, lev + 1)
+
+
+
 
 root = Tree(3)
 root.insert(4)
@@ -50,3 +64,5 @@ root.insert(6)
 root.insert(8)
 
 root.postorder_traversal()
+
+print(level(root, 8))
