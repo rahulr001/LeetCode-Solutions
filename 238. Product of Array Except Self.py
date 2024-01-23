@@ -17,4 +17,3 @@ def productExceptSelf(nums):
 
 print(productExceptSelf(nums))
 
-# [24,12,8,6]
